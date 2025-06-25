@@ -1,0 +1,12 @@
+# Node-related
+**/node_modules/
+**/dist/
+**/build/
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.local
