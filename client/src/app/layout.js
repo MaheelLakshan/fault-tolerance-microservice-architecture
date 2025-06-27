@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
               <House className="w-5 h-5" />
               <Bell className="w-5 h-5" />
               <ShoppingCart className="w-5 h-5" />
-              <Image src="/avatar.png" alt="avatar" width={32} height={32} className="rounded-full border border-gray-300" />
+              <Image src="/avatar.jpg" alt="avatar" width={32} height={32} className="rounded-full border border-gray-300" />
             </div>
           </nav>
           {children}
