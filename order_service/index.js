@@ -24,6 +24,8 @@ const run = async () => {
 
         const dummyOrderId = '123456789';
 
+        console.log(`Order consumer : order created for user ${userId}`);
+
         await producer.send({
           topic: 'order-successful',
           message: [{ value: JSON.stringify({ userId, orderId: dummyOrderId }) }],
