@@ -1,12 +1,12 @@
 # 🛒 Kafka Microservices – Fault Tolerant E-commerce Checkout Flow
 
-A fully event-driven, fault-tolerant microservices system using **Apache Kafka (KRaft mode)**. This simulates a real-world e-commerce checkout process involving payment, order creation, email notification, and analytics tracking — all handled through Kafka topics.
+I recently built a fault tolerant microservices system using Apache Kafka in KRaft mode (No ZooKeeper) to simulate an e-commerce checkout flow. The system leverages real-time, event-driven communication between services, designed purely for learning and hands-on experience.
 
 ---
 
 ## 📸 Demo & Architecture Overview
 
-> 🔻 Upload your architecture diagrams or UI screenshots here
+> 🔻 These are the architecture diagrams and UI screenshots 
 
 ![e commerce dashboard](https://github.com/user-attachments/assets/f921cba4-9937-4e49-91b6-b7608bfab5e4)
 ![Flow Diagram](https://github.com/user-attachments/assets/6237ff9c-dd21-4b31-a86a-58d1dcaab564)
@@ -16,15 +16,6 @@ A fully event-driven, fault-tolerant microservices system using **Apache Kafka (
 
 ---
 
-## 🚀 Project Summary
-
-I recently built a **fault-tolerant microservices system** using **Apache Kafka in KRaft mode**, simulating a complete e-commerce checkout flow. The system is composed of decoupled services communicating via Kafka topics with proper partitioning, replication, and failover support.
-
-💡 It uses:
-- **3 Kafka brokers**
-- **3 partitions**
-- **3 replicas**
-- Kafka **KRaft mode** (no ZooKeeper)
 
 ### 🔁 Event Flow:
 1. **Payment Service** → User clicks checkout → Publishes `payment-successful`
