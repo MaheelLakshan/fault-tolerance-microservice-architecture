@@ -14,7 +14,7 @@ app.use(express.json());
 
 const kafka = new Kafka({
   clientId: 'payment-service',
-  brokers: ['localhost:9094'],
+  brokers: ['localhost:9094', 'localhost:9095', 'localhost:9096'],
 });
 
 const producer = kafka.producer();
@@ -38,7 +38,12 @@ app.post('/payment-service', async (req, res) => {
     messages: [{ value: JSON.stringify({ cart, userId }) }],
   });
 
-  return res.status(200).send('Payment Successful');
+  console.log(`Paymenr Producer : Passed`);
+
+  setTimeout(() => {
+    return res.status(200).send('Payment successful');
+  }, 3000);
+  // return res.status(200).send('Payment Successful');
 });
 
 app.use((err, req, res, next) => {
