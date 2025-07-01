@@ -10,7 +10,7 @@ const admin = kafka.admin();
 const run = async () => {
   await admin.connect();
   await admin.createTopics({
-    topics: [{ topic: 'payment-successful' }, { topic: 'order-successsful' }],
+    topics: [{ topic: 'payment-successful' }, { topic: 'order-successsful' }, { topic: 'email-successful' }],
   });
 };
 
